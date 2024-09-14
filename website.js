@@ -10,7 +10,7 @@ let str = `<head>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="viewport" content="user-scalable=no,initial-scale=1.0,maximum-scale=1.0" />
-  <meta name="apple-mobile-web-app-title" content="调试1">
+  <meta name="apple-mobile-web-app-title" content="调试2">
   <script>
     // 防止 Safari 工具栏弹出
     document.addEventListener('DOMContentLoaded', function() {
