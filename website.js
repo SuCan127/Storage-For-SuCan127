@@ -8,21 +8,13 @@ headers['Content-Security-Policy'] = '';
 let reg = /<head>/;
 let str = `<head>
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,viewport-fit=cover">
-
-  <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-touch-fullscreen" content="yes">
-  <meta name="format-detection" content="telephone=no,email=no,address=no">
-  <meta name="renderer" content="webkit">
   <meta name="HandheldFriendly" content="true">
-  <meta name="MobileOptimized" content="320">
   <meta name="screen-orientation" content="portrait">
-  <meta name="x5-orientation" content="portrait">
   <meta name="full-screen" content="yes">
-  <meta name="x5-fullscreen" content="true">
   <meta name="browsermode" content="application">
-  <meta name="x5-page-mode" content="app">
 `;
 
 body = body.replace(reg, str);
