@@ -1,20 +1,11 @@
-// Quantumult X script to insert CSS and JavaScript into the response HTML
-let rHead = '<head>';
-let newStyle = '<head><link rel="stylesheet" href="https://limbopro.com/CSS/baidu.zhidao.css" type="text/css">';
-let rBody = '</body>';
-let newJavaScript = '<script type="text/javascript" async="async" src="//limbopro.com/Adguard/baidu.zhidao.js"></script></body>';
+let reg = '<div id="right-container" class="h-100vh fixed top-0 flex items-end z-2 transition-transform duration-300" style="left: 1363px;">';
+let newDiv = '<div id="right-container" class="h-100vh fixed top-0 flex items-end z-2 transition-transform duration-300" style="left: 0; width: 100%; height: 100%;">';
 
-// 确保 response.body 存在，并执行替换操作
+// 替换响应体中的原始 `#right-container` 容器，使其占满全屏
 if ($response.body) {
-    // 将 <head> 标签替换为带有新样式表的内容
-    let body = $response.body.replace(rHead, newStyle);
-    
-    // 将 </body> 标签替换为带有 JavaScript 的内容
-    body = body.replace(rBody, newJavaScript);
-    
-    // 返回修改后的 body 内容
-    $done({ body: body });
+    let body = $response.body.replace(reg, newDiv);
+    $done({ body });
 } else {
-    // 如果没有 body 内容，则直接返回未修改的响应
     $done({});
 }
+
