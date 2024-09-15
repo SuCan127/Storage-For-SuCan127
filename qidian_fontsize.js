@@ -1,5 +1,7 @@
 let body = $response.body;
+
 body = body.replace('<div id="reader-content"', '<div id="reader-content" style="position: absolute; left: 0; width: 100%;"');
+
 // 1. 当 <section id="side-sheet"> 打开时铺满整个页面
 body = body.replace('<section data-v-63a3e543="" id="side-sheet" class="h-full"', 
                     '<section data-v-63a3e543="" id="side-sheet" class="h-full" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 9999;"');
