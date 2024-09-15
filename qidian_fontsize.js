@@ -1,26 +1,14 @@
-let body = $response.body;
+// Quantumult X Script to change all fonts to 21px on a webpage
 
-// 添加 CSS 规则，针对手机进行页面布局调整
-let mobileStyle = `
-<style>
-  body {
-    font-size: 20px !important;
-    line-height: 1.6 !important;
-    padding: 10px !important;
-  }
-  /* 调整评论区的显示 */
-  .comment-section {
-    font-size: 18px !important;
-  }
-  /* 让整体页面更适应手机 */
-  * {
-    max-width: 100% !important;
-    word-wrap: break-word !important;
-  }
-</style>
-`;
+let modifyFontSize = () => {
+    let style = document.createElement('style');
+    style.innerHTML = `* { font-size: 21px !important; }`;
+    document.head.appendChild(style);
+};
 
-// 将样式插入到 <head> 标签中
-body = body.replace(/<head>/, `<head>${mobileStyle}`);
-
-$done({ body });
+// Run the function to modify font size after the page loads
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', modifyFontSize);
+} else {
+    modifyFontSize();
+}
