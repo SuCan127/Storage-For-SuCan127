@@ -1,11 +1,26 @@
 let body = $response.body;
 
-// 插入 viewport 元标签，使得页面在手机上适配
-let newViewport = `
-<meta name="viewport" content="width=device-width, initial-scale=1.5, user-scalable=no">
+// 添加 CSS 规则，针对手机进行页面布局调整
+let mobileStyle = `
+<style>
+  body {
+    font-size: 20px !important;
+    line-height: 1.6 !important;
+    padding: 10px !important;
+  }
+  /* 调整评论区的显示 */
+  .comment-section {
+    font-size: 18px !important;
+  }
+  /* 让整体页面更适应手机 */
+  * {
+    max-width: 100% !important;
+    word-wrap: break-word !important;
+  }
+</style>
 `;
 
-// 将 viewport 元标签插入到 <head> 标签中
-body = body.replace(/<head>/, `<head>${newViewport}`);
+// 将样式插入到 <head> 标签中
+body = body.replace(/<head>/, `<head>${mobileStyle}`);
 
 $done({ body });
