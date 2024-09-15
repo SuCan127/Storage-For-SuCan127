@@ -1,10 +1,12 @@
-let reg = '<div id="right-container" class="h-200vh fixed top-0 flex items-end z-2 transition-transform duration-300" style="left: 1363px;">';
-let newDiv = '<div id="right-container" class="h-200vh fixed top-0 flex items-end z-2 transition-transform duration-300" style="left: 0; width: 220%; height: 220%;">';
+let body = $response.body;
 
-// 替换响应体中的原始 `#right-container` 容器，增加其宽度和高度
-if ($response.body) {
-    let body = $response.body.replace(reg, newDiv);
-    $done({ body });
-} else {
-    $done({});
-}
+// 隐藏第一个容器
+body = body.replace('<div id="left-container"', '<div id="left-container" style="display: none;"');
+
+// 将第二个容器移到最左边
+body = body.replace('<div id="reader-content"', '<div id="reader-content" style="position: absolute; left: 0; width: 100%;"');
+
+// 将第三个容器覆盖整个页面
+body = body.replace('<div id="right-container"', '<div id="right-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"');
+
+$done({ body });
