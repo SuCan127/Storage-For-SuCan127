@@ -1,14 +1,20 @@
-// Quantumult X Script to change all fonts to 21px on a webpage
+// Quantumult X script to change the font size of specific elements to 100px
 
-let modifyFontSize = () => {
-    let style = document.createElement('style');
-    style.innerHTML = `* { font-size: 21px !important; }`;
-    document.head.appendChild(style);
-};
+(function() {
+    let modifyFontSize = () => {
+        // Target the elements based on the data attribute or class names
+        let targetElements = document.querySelectorAll('[data-v-8a7b341d] li');
+        
+        // Change the font size of the targeted elements to 100px
+        targetElements.forEach(element => {
+            element.style.fontSize = '100px';
+        });
+    };
 
-// Run the function to modify font size after the page loads
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', modifyFontSize);
-} else {
-    modifyFontSize();
-}
+    // Run the function after the page has fully loaded
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', modifyFontSize);
+    } else {
+        modifyFontSize();
+    }
+})();
