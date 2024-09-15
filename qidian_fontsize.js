@@ -4,7 +4,7 @@ let body = $response.body;
 let newStyle = `
 <style>
   body {
-    font-size: 21px !important;
+    font-size: 100px !important;
   }
 </style>
 `;
