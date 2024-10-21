@@ -1,7 +1,7 @@
 payload:
   - DOMAIN-SUFFIX, jp
-  - DOMAIN-KEYWORD,fc2
-  - DOMAIN-KEYWORD,fc2id
-  - DOMAIN-KEYWORD,fc2ppvdb
+  - DOMAIN-KEYWORD, fc2
+  - DOMAIN-KEYWORD, fc2id
+  - DOMAIN-KEYWORD, fc2ppvdb
   - DOMAIN-SUFFIX, mgstage.com
   - DOMAIN-SUFFIX, xiaojiadianmovie.be
