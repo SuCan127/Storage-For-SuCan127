@@ -1,4 +1,5 @@
 payload:
   - AND,((GEOIP,CN),(DOMAIN,pitaya.bytedance.com))
+  - DOMAIN-SUFFIX,kelee.one,DIRECT
   - DOMAIN-SUFFIX, iill.top
   - DOMAIN-SUFFIX, goodiptv.club
