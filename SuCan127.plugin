@@ -1,13 +1,11 @@
 #!name = 山无涯
 #!desc = 吾惟自勉，能令大道行。
-#!openUrl = https://github.com/SuCan127/Storage-For-SuCan127
 #!author = SuCan127[https://github.com/SuCan127], app2smile[https://github.com/app2smile]
 #!tag = 山无涯
 #!system = 
 #!system_version = 
 #!loon_version = 3.2.3(762)
-#!homepage = https://github.com/SuCan127/Storage-For-SuCan127
-#!icon = https://raw.githubusercontent.com/SuCan127/Storage-For-SuCan127/main/IMG_5832.png
+#!icon = https://raw.githubusercontent.com/SuCan127/Storage-For-SuCan127/main/Icon/IMG_5853.png
 #!date = 2024-10-21 17:00:00
 
 [Rule]
@@ -36,9 +34,9 @@ DOMAIN-SUFFIX,kr,Korea
 ^https?:\/\/tieba\.baidu\.com\/mo\/q\/activityDiversion\/download(\?.*)?$ reject
 
 [Script]
-http-response ^https?:\/\/www\.qidian\.com\/chapter\/(\d+)\/(\d+)\/ script-path=https://raw.githubusercontent.com/SuCan127/Storage-For-SuCan127/main/qidian.js, requires-body=true, tag=起点阅读页全屏
-http-response ^https:\/\/boxer\.baidu\.com\/scheme\?scheme script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/baidu-no-redirect.js, timeout=10, tag=百度防跳转
-http-response ^https:\/\/(api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/get_ads|open\.e\.kuaishou\.com\/rest\/e\/v3\/open\/univ$|mi\.gdt\.qq\.com\/gdt_mview\.fcg\?) script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/adsense.js, requires-body=true, timeout=10, tag=广告联盟json
+http-response ^https?:\/\/www\.qidian\.com\/chapter\/(\d+)\/(\d+)\/ script-path=https://raw.githubusercontent.com/SuCan127/Storage-For-SuCan127/main/Js/qidian.js, requires-body=true, tag=起点阅读页全屏
+http-response ^https:\/\/boxer\.baidu\.com\/scheme\?scheme script-path=https://raw.githubusercontent.com/SuCan127/Storage-For-SuCan127/main/Js/baidu-no-redirect.js, timeout=10, tag=百度防跳转
+http-response ^https:\/\/(api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/get_ads|open\.e\.kuaishou\.com\/rest\/e\/v3\/open\/univ$|mi\.gdt\.qq\.com\/gdt_mview\.fcg\?) script-path=https://raw.githubusercontent.com/SuCan127/Storage-For-SuCan127/main/Js/adsense.js, requires-body=true, timeout=10, tag=广告联盟json
 
 [Mitm]
 hostname = cn.bing.com,www.bing.com,*.qidian.com,*.lightnovel.us,*.bilinovel.com,tieba.baidu.com,-pan.baidu.com,-*.zhihu.com,boxer.baidu.com,api-access.pangolin-sdk-toutiao.com, mi.gdt.qq.com, open.e.kuaishou.com
