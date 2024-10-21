@@ -1,6 +1,6 @@
 payload:
   - DOMAIN, api-adservices.apple.com, REJECT
-  - AND,((GEOIP,CN),(DOMAIN,pitaya.bytedance.com))
+  - AND,((GEOIP,CN),(DOMAIN,pitaya.bytedance.com)), DIRECT
   - DOMAIN-SUFFIX, iill.top, DIRECT
   - DOMAIN-SUFFIX, goodiptv.club, DIRECT
   - DOMAIN-SUFFIX, 123456.al, Final
