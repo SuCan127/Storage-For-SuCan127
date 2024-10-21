@@ -19,9 +19,9 @@ DOMAIN-SUFFIX,nijigem.by,Final
 DOMAIN-SUFFIX,emby.netyi.cloud,Emby
 DOMAIN-SUFFIX,challenges.cloudflare.com,America
 DOMAIN-SUFFIX,jp,Japan
-DOMAIN-SUFFIX,fc2.com,Japan
-DOMAIN-SUFFIX,fc2id.com,Japan
-DOMAIN-SUFFIX,fc2ppvdb.com,Japan
+DOMAIN-KEYWORD,fc2,Japan
+DOMAIN-KEYWORD,fc2id,Japan
+DOMAIN-KEYWORD,fc2ppvdb,Japan
 DOMAIN-SUFFIX,mgstage.com,Japan
 DOMAIN-SUFFIX,xiaojiadianmovie.be,Japan
 DOMAIN-SUFFIX,kr,Korea
