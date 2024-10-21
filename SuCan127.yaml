@@ -8,7 +8,9 @@ payload:
   - DOMAIN-SUFFIX, emby.netyi.cloud, Emby
   - DOMAIN-SUFFIX, challenges.cloudflare.com, America
   - DOMAIN-SUFFIX, jp, Japan
-  - DOMAIN-SUFFIX, fc2.com, Japan
+  - DOMAIN-KEYWORD,fc2,Japan
+  - DOMAIN-KEYWORD,fc2id,Japan
+  - DOMAIN-KEYWORD,fc2ppvdb,Japan
   - DOMAIN-SUFFIX, mgstage.com, Japan
   - DOMAIN-SUFFIX, xiaojiadianmovie.be, Japan
   - DOMAIN-SUFFIX, kr, Korea
