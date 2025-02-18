@@ -35,7 +35,6 @@ DOMAIN-SUFFIX,kr,Korea
 ^https?:\/\/obsolete\.lightnovel\.us\/(.*) 302 https://www.lightnovel.us/$1
 ^https?:\/\/obsolete1\.lightnovel\.us\/(.*) 302 https://www.lightnovel.us/$1
 ^https?:\/\/www\.bilinovel\.com\/(.*) 302 https://www.linovelib.com/$1
-^https?:\/\/tieba\.baidu\.com\/mo\/q\/activityDiversion\/download(\?.*)?$ reject
 
 [Script]
 http-response ^https?:\/\/www\.qidian\.com\/chapter\/(\d+)\/(\d+)\/ script-path=https://raw.githubusercontent.com/SuCan127/Storage-For-SuCan127/main/Js/qidian.js, requires-body=true, tag=起点阅读页全屏
