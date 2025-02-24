@@ -1,4 +1,3 @@
 payload:
   - AND,((GEOIP,CN),(DOMAIN,pitaya.bytedance.com))
-  - DOMAIN-SUFFIX, kelee.one
   - DOMAIN-SUFFIX, iill.top
