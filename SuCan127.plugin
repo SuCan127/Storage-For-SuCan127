@@ -12,8 +12,8 @@
 [Rule]
 DOMAIN,api-adservices.apple.com,REJECT
 AND, ((GEOIP, CN),(DOMAIN, pitaya.bytedance.com)), DIRECT
-DOMAIN-SUFFIX,kelee.one,DIRECT
 DOMAIN-SUFFIX,iill.top,DIRECT
+DOMAIN-SUFFIX,kelee.one,Final
 DOMAIN-SUFFIX,123456.al,Final
 DOMAIN-SUFFIX,nijigem.by,Final
 DOMAIN-SUFFIX,goodiptv.club,Final
