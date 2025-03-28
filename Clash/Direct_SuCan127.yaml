@@ -1,4 +1,4 @@
 payload:
   - AND,((GEOIP,CN),(DOMAIN,pitaya.bytedance.com))
-  - DOMAIN-SUFFIX,imap.mail.yahoo.com
+  - DOMAIN-SUFFIX, imap.mail.yahoo.com
   - DOMAIN-SUFFIX, iill.top
