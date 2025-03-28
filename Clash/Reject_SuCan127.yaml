@@ -1,5 +1,5 @@
 payload:
-  - URL-REGEX, "\.log\."
+  - URL-REGEX,"\.log\."
   - DOMAIN-SUFFIX, cishu.souyun.cn
   - DOMAIN, api-adservices.apple.com
-  - AND,((PROTOCOL, STUN), (DOMAIN-KEYWORD, bilibili.))
+  - AND,((PROTOCOL,STUN),(DOMAIN-KEYWORD,bilibili.))
