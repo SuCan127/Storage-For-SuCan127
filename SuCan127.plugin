@@ -37,9 +37,6 @@ DOMAIN-SUFFIX,kr,Korea
 ^https?:\/\/www\.bing\.com\/search\?(.*&)?cc=cn(&.*)? 302 https://www.bing.com/search?$1cc=hk$2
 ^https?:\/\/www\.bing\.com\/search\?(.*&)?setmkt=zh-cn(&.*)? 302 https://www.bing.com/search?$1setmkt=zh-hk$2
 ^https?:\/\/m\.qidian\.com\/chapter\/(.*) 302 https://www.qidian.com/chapter/$1
-^https?:\/\/obsolete\.lightnovel\.us\/(.*) 302 https://www.lightnovel.us/$1
-^https?:\/\/obsolete1\.lightnovel\.us\/(.*) 302 https://www.lightnovel.us/$1
-^https?:\/\/www\.bilinovel\.com\/(.*) 302 https://www.linovelib.com/$1
 ^https?:\/\/tieba\.baidu\.com\/mo\/q\/activityDiversion\/download(\?.*)?$ reject
 
 [Script]
@@ -48,5 +45,5 @@ http-response ^https:\/\/(api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\
 http-response ^https:\/\/boxer\.baidu\.com\/scheme\?scheme script-path=https://raw.githubusercontent.com/SuCan127/Storage-For-SuCan127/main/Js/baidu-no-redirect.js, timeout=10, tag=百度防跳转
 
 [Mitm]
-hostname = cn.bing.com,www.bing.com,*.qidian.com,*.lightnovel.us,*.bilinovel.com,-pan.baidu.com,api-access.pangolin-sdk-toutiao.com,mi.gdt.qq.com,open.e.kuaishou.com,tieba.baidu.com,boxer.baidu.com
+hostname = cn.bing.com,www.bing.com,*.qidian.com,-pan.baidu.com,api-access.pangolin-sdk-toutiao.com,mi.gdt.qq.com,open.e.kuaishou.com,tieba.baidu.com,boxer.baidu.com
 
