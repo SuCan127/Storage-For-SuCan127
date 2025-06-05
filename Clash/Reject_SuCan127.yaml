@@ -1,5 +1,8 @@
 payload:
   - URL-REGEX,"\.log\."
+  - DOMAIN, wxa.wxs.qq.com
+  - DOMAIN, wximg.wxs.qq.com
+  - DOMAIN, wxsmw.wxs.qq.com
   - DOMAIN-SUFFIX, cishu.souyun.cn
   - DOMAIN, api-adservices.apple.com
   - AND,((PROTOCOL,STUN),(DOMAIN-KEYWORD,bilibili.))
