@@ -47,6 +47,5 @@ http-response ^https:\/\/(api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\
 http-response ^https:\/\/boxer\.baidu\.com\/scheme\?scheme script-path=https://raw.githubusercontent.com/SuCan127/Storage-For-SuCan127/main/Js/baidu-no-redirect.js, timeout=10, tag=百度防跳转
 
 [Mitm]
-hostname = %APPEND% wxa.wxs.qq.com,wximg.wxs.qq.com,wxsmw.wxs.qq.com
-hostname = cn.bing.com,www.bing.com,*.qidian.com,-pan.baidu.com,api-access.pangolin-sdk-toutiao.com,mi.gdt.qq.com,open.e.kuaishou.com,tieba.baidu.com,boxer.baidu.com
+hostname = wxa.wxs.qq.com,wximg.wxs.qq.com,wxsmw.wxs.qq.com,cn.bing.com,www.bing.com,*.qidian.com,-pan.baidu.com,api-access.pangolin-sdk-toutiao.com,mi.gdt.qq.com,open.e.kuaishou.com,tieba.baidu.com,boxer.baidu.com
 
