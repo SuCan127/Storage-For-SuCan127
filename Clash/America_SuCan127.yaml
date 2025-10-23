@@ -1,2 +1,3 @@
 payload:
+  - DOMAIN-SUFFIX, btdig.com
   - DOMAIN-SUFFIX, challenges.cloudflare.com
