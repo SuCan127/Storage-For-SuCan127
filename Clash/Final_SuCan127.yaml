@@ -2,5 +2,6 @@ payload:
   - DOMAIN-SUFFIX, kelee.one
   - DOMAIN-SUFFIX, nijigem.by
   - DOMAIN-SUFFIX, goodiptv.club
+  - DOMAIN-SUFFIX, cloudflare.com
   - DOMAIN-SUFFIX, greasyfork.org
   - DOMAIN, amp-api.podcasts.apple.com
