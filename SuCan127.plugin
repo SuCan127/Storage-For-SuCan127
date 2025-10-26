@@ -14,6 +14,10 @@ URL-REGEX,"\.log\.",REJECT
 DOMAIN,wxa.wxs.qq.com,REJECT
 DOMAIN,wximg.wxs.qq.com,REJECT
 DOMAIN,wxsmw.wxs.qq.com,REJECT
+DOMAIN-SUFFIX,adobe.io,REJECT
+DOMAIN-SUFFIX,*.adobe.io,REJECT
+DOMAIN-SUFFIX,adobestats.io,REJECT
+DOMAIN-SUFFIX,*.adobestats.io,REJECT
 DOMAIN-SUFFIX,cishu.souyun.cn,REJECT
 DOMAIN,api-adservices.apple.com,REJECT
 AND,((PROTOCOL, STUN), (DOMAIN-KEYWORD, bilibili.)),REJECT
