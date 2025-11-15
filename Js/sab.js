@@ -1,51 +1,30 @@
-(function removeSmartAppBanner() {
-  const selector = 'meta[name="apple-itunes-app"]';
+const method = $request.method;
+const url = $request.url;
+const status = $response.status;
+let headers = $response.headers;
+let body = $response.body;
+const notifiTitle = "移除 Smart App Banner";
 
-  // Remove any existing meta tags immediately
-  function removeExisting() {
-    try {
-      const metas = document.querySelectorAll(selector);
-      metas.forEach(m => m.remove());
-    } catch (e) {
-      // defensive: ignore DOM access errors
+if (method !== "GET" || status !== 200 || !headers || !headers['Content-Type'] || headers['Content-Type'].indexOf('text/html') === -1) {
+    console.log(`method:${method}, status:${status}, url:${url}`);
+    $notification.post(notifiTitle, "跳过处理", "非 HTML 响应或方法/状态不匹配");
+    $done({ headers, body });
+} else {
+    // 正则：匹配任意包含 name="apple-itunes-app"（属性顺序不限、单双引号兼容）的 meta 标签
+    const metaPattern = /<meta\b[^>]*\bname\s*=\s*(['"]?)apple-itunes-app\1[^>]*>/gi;
+    const matches = body.match(metaPattern);
+    if (!matches || matches.length === 0) {
+        console.log('未找到 apple-itunes-app meta 标签， 无需修改');
+        $notification.post(notifiTitle, "未找到", "页面中没有 smart app banner meta 标签");
+        $done({ headers, body });
+    } else {
+        const removedCount = matches.length;
+        body = body.replace(metaPattern, '');
+        // 删除 Content-Length 以避免长度不一致的问题，代理/客户端 会重写或忽略该字段
+        if (headers.hasOwnProperty('Content-Length')) delete headers['Content-Length'];
+        if (headers.hasOwnProperty('content-length')) delete headers['content-length'];
+        console.log(`已移除 ${removedCount} 个 apple-itunes-app meta 标签, url:${url}`);
+        $notification.post(notifiTitle, "已移除", `移除了 ${removedCount} 个 Smart App Banner 元素`);
+        $done({ headers, body });
     }
-  }
-
-  removeExisting();
-
-  // Watch the <head> in case a script injects the meta later
-  const head = document.head || document.getElementsByTagName('head')[0];
-  if (!head) return;
-
-  const observer = new MutationObserver(mutations => {
-    for (const m of mutations) {
-      if (m.type === 'childList' && m.addedNodes.length) {
-        m.addedNodes.forEach(node => {
-          if (node.nodeType !== 1) return;
-          try {
-            // If the node itself is the meta, remove it
-            if (node.matches && node.matches(selector)) {
-              node.remove();
-            } else if (node.querySelector) {
-              // If the node contains the meta deeper, remove those too
-              const found = node.querySelectorAll(selector);
-              found.forEach(n => n.remove());
-            }
-          } catch (e) { /* ignore */ }
-        });
-      } else if (m.type === 'attributes' && m.target) {
-        // If attributes change on an element that matches, remove it
-        try {
-          if (m.target.matches && m.target.matches(selector)) m.target.remove();
-        } catch (e) { /* ignore */ }
-      }
-    }
-  });
-
-  observer.observe(head, { childList: true, subtree: true, attributes: true, attributeFilter: ['name'] });
-
-  // Optional: provide a way to stop observing if needed
-  if (!window.__stopRemoveSmartAppBanner) {
-    window.__stopRemoveSmartAppBanner = () => observer.disconnect();
-  }
-})();
+}
