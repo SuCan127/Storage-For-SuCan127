@@ -20,6 +20,7 @@ DOMAIN-SUFFIX,adobestats.io,REJECT
 DOMAIN-SUFFIX,*.adobestats.io,REJECT
 DOMAIN-SUFFIX,cishu.souyun.cn,REJECT
 DOMAIN,api-adservices.apple.com,REJECT
+DOMAIN,app-site-association.cdn-apple.com,REJECT
 AND,((PROTOCOL, STUN), (DOMAIN-KEYWORD, bilibili.)),REJECT
 AND, ((GEOIP, CN),(DOMAIN, pitaya.bytedance.com)), DIRECT
 DOMAIN-SUFFIX,imap.mail.yahoo.com,DIRECT
