@@ -1,16 +1,14 @@
 #!name = Smart App Banner
 #!desc = 移除Smart App Banner
-#!author = SuCan127[https://github.com/SuCan127], app2smile[https://github.com/app2smile]
+#!author = SuCan127[https://github.com/SuCan127]
 #!tag = 山无涯
 #!system = 
 #!system_version = 
-#!loon_version = 3.2.3(762)
 #!homepage = https://github.com/SuCan127/Storage-For-SuCan127
 #!icon = https://raw.githubusercontent.com/SuCan127/Storage-For-SuCan127/main/Icon/IMG_5832.png
-#!date = 2024-10-21 17:00:00
 
 [Script]
-http-response ^https?:\/\/m\.bilibili\.com\/.* script-path=https://raw.githubusercontent.com/SuCan127/Storage-For-SuCan127/main/Js/sab.js, requires-body=true, tag=Smart App Banner 
+http-response ^https?://m.[A-Za-z0-9-]+(?:.[A-Za-z]{2,})+(?:[/?#].*)?$ script-path=https://raw.githubusercontent.com/SuCan127/Storage-For-SuCan127/main/Js/sab.js, requires-body=true, tag=Smart App Banner 
 
 [Mitm]
-hostname = bilibili.com
+hostname = bilibili.com, youtube.com
