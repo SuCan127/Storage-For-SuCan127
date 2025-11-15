@@ -4,10 +4,8 @@
 #!tag = 山无涯
 #!system = 
 #!system_version = 
-#!loon_version = 3.2.3(762)
 #!homepage = https://github.com/SuCan127/Storage-For-SuCan127
 #!icon = https://raw.githubusercontent.com/SuCan127/Storage-For-SuCan127/main/Icon/IMG_5832.png
-#!date = 2024-10-21 17:00:00
 
 [Rule]
 URL-REGEX,"\.log\.",REJECT
