@@ -5,7 +5,7 @@
 #!system = 
 #!system_version = 
 #!homepage = https://github.com/SuCan127/Storage-For-SuCan127
-#!icon = https://raw.githubusercontent.com/SuCan127/Storage-For-SuCan127/main/Icon/IMG_5832.png
+#!icon = https://github.com/SuCan127/Storage-For-SuCan127/raw/main/Icon/IMG_5832.png
 
 [Rule]
 URL-REGEX,"\.log\.",REJECT
@@ -52,7 +52,7 @@ DOMAIN-SUFFIX,kr,Korea
 ^https?:\/\/app-site-association\.cdn-apple\.com(\/.*)?(\?.*)?$ reject
 
 [Script]
-http-response ^https?:\/\/www\.qidian\.com\/chapter\/(\d+)\/(\d+)\/ script-path=https://raw.githubusercontent.com/SuCan127/Storage-For-SuCan127/main/Js/qidian.js, requires-body=true, tag=起点阅读页全屏
+http-response ^https?:\/\/www\.qidian\.com\/chapter\/(\d+)\/(\d+)\/ script-path=https://github.com/SuCan127/Storage-For-SuCan127/raw/main/Js/qidian.js, requires-body=true, tag=起点阅读页全屏
 
 [Mitm]
 hostname = %APPEND% wxa.wxs.qq.com,wximg.wxs.qq.com,wxsmw.wxs.qq.com,cn.bing.com,www.bing.com,*.qidian.com,tieba.baidu.com,-pan.baidu.com,api-adservices.apple.com,app-site-association.cdn-apple.com
