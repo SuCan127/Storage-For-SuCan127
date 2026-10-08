@@ -9,4 +9,6 @@ payload:
   - DOMAIN-SUFFIX,*.adobestats.io
   - DOMAIN-SUFFIX, cishu.souyun.cn
   - DOMAIN, api-adservices.apple.com
+  - DOMAIN-SUFFIX, mumu.nie.netease.com
+  - DOMAIN-SUFFIX, store-api.mumu.163.com
   - AND,((PROTOCOL,STUN),(DOMAIN-KEYWORD,bilibili.))
