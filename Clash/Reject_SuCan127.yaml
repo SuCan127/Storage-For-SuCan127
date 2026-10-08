@@ -11,5 +11,6 @@ payload:
   - DOMAIN, api-adservices.apple.com
   - DOMAIN-SUFFIX, mumu.163.com
   - DOMAIN-SUFFIX, mumuglobal.com
+  - DOMAIN-SUFFIX, mumuplayer.com
   - DOMAIN-SUFFIX, mumu.nie.netease.com
   - AND,((PROTOCOL,STUN),(DOMAIN-KEYWORD,bilibili.))
